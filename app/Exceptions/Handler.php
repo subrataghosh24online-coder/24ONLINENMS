@@ -14,8 +14,8 @@ class Handler extends ExceptionHandler implements \Illuminate\Contracts\Debug\Ex
         parent::report($exception);
     }
 
-    public function render(Throwable $exception , $request)
+    public function render($request, Throwable $exception)
     {
-        return parent::render( $exception , $request);
+        return parent::render($request,$exception);
     }
 }
